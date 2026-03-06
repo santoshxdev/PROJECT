@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="DigitalHub Store – Browse 150+ premium digital products including UI Kits, E-books, Templates, and Developer Tools." />
+    <title>DigitalHub Store – Premium Digital Products</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">DigitalHub</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#products" class="nav-link">Store</a></li>
+                <li><a href="#categories" class="nav-link">Categories</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle Theme">
+                    <span class="toggle-track">
+                        <span class="toggle-thumb">
+                            <span class="icon-sun">☀️</span>
+                            <span class="icon-moon">🌙</span>
+                        </span>
+                    </span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====== HERO SECTION ====== -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="hero-content" id="heroContent">
+            <div class="hero-badge">🚀 Premium Digital Marketplace</div>
+            <h1 class="hero-title">
+                Digital Product<br />
+                <span class="gradient-text">Showcase</span>
+            </h1>
+            <p class="hero-subtitle">
+                Explore 150+ curated premium digital products — UI Kits, E-books, Templates, and Developer Tools —
+                handpicked for designers and developers.
+            </p>
+            <div class="hero-actions">
+                <a href="#products" class="btn btn-primary" id="exploreBtn">
+                    <span>Explore Store</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <a href="#about" class="btn btn-ghost">Learn More</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-number">150+</span><span class="stat-label">Products</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-number">50K+</span><span class="stat-label">Downloads</span></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-dot"></div>
+        </div>
+    </section>
+
+    <!-- ====== SEARCH & FILTER SECTION ====== -->
+    <section class="search-section" id="categories">
+        <div class="container">
+            <div class="search-wrapper reveal">
+                <div class="search-bar-container">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M21 21l-4.35-4.35" />
+                    </svg>
+                    <input type="text" id="searchInput" class="search-input"
+                        placeholder="Search products by name, category or description..." autocomplete="off" />
+                    <button class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
+                </div>
+            </div>
+            <div class="filter-section reveal">
+                <p class="filter-label">Browse by Category:</p>
+                <div class="filter-buttons" id="filterButtons">
+                    <button class="filter-btn active" data-category="all" id="filterAll">All Products</button>
+                    <button class="filter-btn" data-category="UI Kits" id="filterUIKits">🎨 UI Kits</button>
+                    <button class="filter-btn" data-category="E-books" id="filterEbooks">📚 E-books</button>
+                    <button class="filter-btn" data-category="Templates" id="filterTemplates">📄 Templates</button>
+                    <button class="filter-btn" data-category="Tools" id="filterTools">🛠️ Tools</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== PRODUCTS SECTION ====== -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Browse Collection</span>
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-subtitle">Hand-picked premium digital assets to accelerate your projects</p>
+            </div>
+
+            <!-- Store Toolbar -->
+            <div class="store-toolbar reveal">
+                <div class="result-count" id="resultCount">Showing <strong>0</strong> products</div>
+                <div class="toolbar-right">
+                    <label class="sort-label" for="sortSelect">Sort by:</label>
+                    <select class="sort-select" id="sortSelect">
+                        <option value="default">Featured</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="name">A – Z</option>
+                    </select>
+                    <div class="view-toggle">
+                        <button class="view-btn-icon active" id="viewGrid" title="Grid view"
+                            aria-label="Grid view">⊞</button>
+                        <button class="view-btn-icon" id="viewList" title="List view" aria-label="List view">≡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products-grid" id="productsGrid"></div>
+
+            <div class="no-results" id="noResults" style="display:none;">
+                <div class="no-results-icon">🔍</div>
+                <h3>No products found</h3>
+                <p>Try a different search term or category.</p>
+                <button class="btn btn-ghost" id="resetSearch" style="margin-top:16px">Reset Filters</button>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination"></div>
+        </div>
+    </section>
+
+    <!-- ====== ABOUT SECTION ====== -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content reveal">
+                    <span class="section-tag">About Us</span>
+                    <h2 class="section-title">Why Choose DigitalHub?</h2>
+                    <p class="about-description">We curate the finest digital products from talented creators worldwide.
+                        Every product is vetted for quality, usability, and modern design standards.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">⚡</div>
+                            <div>
+                                <h4>Instant Downloads</h4>
+                                <p>Access your products immediately after purchase.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🔒</div>
+                            <div>
+                                <h4>Secure &amp; Trusted</h4>
+                                <p>All products are scanned and verified by our team.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🎯</div>
+                            <div>
+                                <h4>Premium Quality</h4>
+                                <p>Handpicked creations that meet the highest standards.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🔄</div>
+                            <div>
+                                <h4>Free Lifetime Updates</h4>
+                                <p>Get all future updates at no extra cost.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual reveal">
+                    <div class="visual-card">
+                        <div class="visual-inner">
+                            <div class="v-stat"><span class="v-num">150+</span><span class="v-lbl">Digital
+                                    Products</span></div>
+                            <div class="v-stat"><span class="v-num">200+</span><span class="v-lbl">Creators</span></div>
+                            <div class="v-stat"><span class="v-num">50K+</span><span class="v-lbl">Happy
+                                    Customers</span></div>
+                            <div class="v-stat"><span class="v-num">4.9★</span><span class="v-lbl">Average Rating</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo"><span class="logo-icon">⚡</span><span class="logo-text">DigitalHub</span>
+                    </div>
+                    <p class="footer-tagline">Premium digital products for modern creators and developers.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+                        <a href="#" class="social-link" aria-label="GitHub">⌂</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                        <a href="#" class="social-link" aria-label="Instagram">◎</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#products">UI Kits</a></li>
+                        <li><a href="#products">E-books</a></li>
+                        <li><a href="#products">Templates</a></li>
+                        <li><a href="#products">Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 DigitalHub. All rights reserved. Crafted with ❤️ for digital creators.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== PRODUCT MODAL ====== -->
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+            <div class="modal-content" id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- ====== BACK TO TOP ====== -->
+    <button class="back-to-top" id="backToTop" aria-label="Scroll to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
